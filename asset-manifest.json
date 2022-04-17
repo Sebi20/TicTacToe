@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Sebi20/TicTacToe/static/css/main.60b96a1d.css",
-    "main.js": "/Sebi20/TicTacToe/static/js/main.7a76cbbb.js",
-    "index.html": "/Sebi20/TicTacToe/index.html",
-    "main.60b96a1d.css.map": "/Sebi20/TicTacToe/static/css/main.60b96a1d.css.map",
-    "main.7a76cbbb.js.map": "/Sebi20/TicTacToe/static/js/main.7a76cbbb.js.map"
+    "main.css": "/TicTacToe/static/css/main.60b96a1d.css",
+    "main.js": "/TicTacToe/static/js/main.7a76cbbb.js",
+    "index.html": "/TicTacToe/index.html",
+    "main.60b96a1d.css.map": "/TicTacToe/static/css/main.60b96a1d.css.map",
+    "main.7a76cbbb.js.map": "/TicTacToe/static/js/main.7a76cbbb.js.map"
   },
   "entrypoints": [
     "static/css/main.60b96a1d.css",
