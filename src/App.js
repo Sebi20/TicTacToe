@@ -1,3 +1,5 @@
+//To deploy app use: npm run deploy
+
 import './App.css';
 import {useState} from 'react'
 
@@ -26,6 +28,7 @@ function App() {
       cells[i].innerText = "";
       cells[i].style.backgroundColor = ""
     }
+    setletter("X");
   }
 
   //This function checks the different conditions of how to win a tic tac toe game.
