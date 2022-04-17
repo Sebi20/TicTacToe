@@ -15,9 +15,16 @@ function App() {
 
   }
 
+  function highlight(first, second, third){
+    cells[first].style.backgroundColor = "green";
+    cells[second].style.backgroundColor = "green";
+    cells[third].style.backgroundColor = "green";
+  }
+
   function resetBoard(){
     for(let i in cells){
       cells[i].innerText = "";
+      cells[i].style.backgroundColor = ""
     }
   }
 
@@ -26,27 +33,43 @@ function App() {
   function checkForWinner(){
     if(cells[0].innerText !=="" && cells[0].innerText === cells[1].innerText && cells[1].innerText === cells[2].innerText){
       alert(cells[0].innerText + " is the winner");
+      setletter("X");
+      highlight(0, 1, 2);
 
     }else if(cells[0].innerText !=="" && cells[0].innerText === cells[4].innerText && cells[4].innerText === cells[8].innerText){
       alert(cells[0].innerText + " is the winner");
+      highlight(0, 4, 8);
+      setletter("X");
 
     }else if(cells[3].innerText !=="" && cells[3].innerText === cells[4].innerText && cells[4].innerText === cells[5].innerText){
       alert(cells[3].innerText + " is the winner");
+      highlight(3, 4, 5);
+      setletter("X");
 
     }else if(cells[2].innerText !=="" && cells[2].innerText === cells[4].innerText && cells[4].innerText === cells[6].innerText){
       alert(cells[2].innerText + " is the winner");
+      highlight(2, 4, 6);
+      setletter("X");
 
     }else if(cells[6].innerText !=="" && cells[6].innerText === cells[7].innerText && cells[7].innerText === cells[8].innerText){
       alert(cells[6].innerText + " is the winner");
+      highlight(6, 7, 8);
+      setletter("X");
 
     }else if(cells[0].innerText !=="" && cells[0].innerText === cells[3].innerText && cells[3].innerText === cells[6].innerText){
       alert(cells[0].innerText + " is the winner");
+      highlight(0, 3, 6);
+      setletter("X");
 
     }else if(cells[1].innerText !=="" && cells[1].innerText === cells[4].innerText && cells[4].innerText === cells[7].innerText){
       alert(cells[1].innerText + " is the winner");
+      highlight(1, 4, 7);
+      setletter("X");
 
     }else if(cells[2].innerText !=="" && cells[2].innerText === cells[5].innerText && cells[5].innerText === cells[8].innerText){
       alert(cells[2].innerText + " is the winner");
+      highlight(2, 5, 8);
+      setletter("X");
     }
   }
 
@@ -58,6 +81,7 @@ function App() {
   return (
     <> 
     <div className='holder'>
+      <h1>Tic Tac Toe #️⃣</h1>
       <table>
         <tbody>
           <tr>
@@ -78,7 +102,7 @@ function App() {
         </tbody>
       </table>
 
-      <button onClick={resetBoard}>Reset</button>
+      <button onClick={resetBoard}>Restart</button>
       </div>
     </>
   );
