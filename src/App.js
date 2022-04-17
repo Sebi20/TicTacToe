@@ -18,17 +18,17 @@ function App() {
   }
 
   function highlight(first, second, third){
-    cells[first].style.backgroundColor = "green";
-    cells[second].style.backgroundColor = "green";
-    cells[third].style.backgroundColor = "green";
+    cells[first].style.backgroundColor = "rgb(168, 154, 204)";
+    cells[second].style.backgroundColor = "rgb(168, 154, 204)";
+    cells[third].style.backgroundColor = "rgb(168, 154, 204)";
   }
 
   function resetBoard(){
+    setletter("X");
     for(let i in cells){
       cells[i].innerText = "";
-      cells[i].style.backgroundColor = ""
+      cells[i].style.backgroundColor = "";
     }
-    setletter("X");
   }
 
   //This function checks the different conditions of how to win a tic tac toe game.
@@ -84,7 +84,7 @@ function App() {
   return (
     <> 
     <div className='holder'>
-      <h1>Tic Tac Toe #️⃣</h1>
+      <h1 className='header'>Tic Tac Toe #️⃣</h1>
       <table>
         <tbody>
           <tr>
