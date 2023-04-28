@@ -9,13 +9,17 @@ function App() {
   const [letter, setletter] = useState("X");
 
   function changeLetter(event){
+    event.preventDefault();
+
+    if(event.target.innerText == "X" || event.target.innerText == "O"){
+      return;
+    }
     event.target.innerText = letter;
     if(letter === "X"){
       setletter("O");
     }else if(letter === "O"){
       setletter("X");
     }
-
   }
 
   function highlight(first, second, third){
@@ -85,6 +89,7 @@ function App() {
     }
   }
 
+  //The function changes the letter upon input and then checks for the winner
   function check(event){
     changeLetter(event);
     checkForWinner();
